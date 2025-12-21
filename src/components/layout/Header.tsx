@@ -42,13 +42,13 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <a
-              href="tel:12345678901"
+            <Link
+              to="/contact"
               className="flex items-center px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span>联系我们</span>
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}

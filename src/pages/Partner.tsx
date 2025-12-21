@@ -45,6 +45,27 @@ const Partner = () => {
 
       if (error) throw error;
 
+      // Send email notification
+      await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          subject: '【新申请】收到新的城市合伙人申请',
+          html: `
+            <h2>新合伙人申请</h2>
+            <p><strong>姓名：</strong>${data.name}</p>
+            <p><strong>电话：</strong>${data.phone}</p>
+            <p><strong>意向区域：</strong>${data.region}</p>
+            <p><strong>预计投资：</strong>${data.investment}</p>
+            <p><strong>行业经验：</strong>${data.experience || '未填写'}</p>
+            <p><strong>留言：</strong>${data.message || '无'}</p>
+            <p>提交时间：${new Date().toLocaleString()}</p>
+          `,
+        }),
+      });
+
       setSubmitStatus('success');
       reset();
     } catch (error) {

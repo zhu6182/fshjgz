@@ -43,6 +43,26 @@ const Contact = () => {
 
       if (error) throw error;
 
+      // Send email notification
+      await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          subject: '【新咨询】官网收到新的客户咨询',
+          html: `
+            <h2>新客户咨询</h2>
+            <p><strong>姓名：</strong>${data.name}</p>
+            <p><strong>电话：</strong>${data.phone}</p>
+            <p><strong>服务类型：</strong>${data.service_type === 'furniture' ? '家具改色贴膜' : '门窗隔热防爆膜'}</p>
+            <p><strong>地址：</strong>${data.address || '未填写'}</p>
+            <p><strong>需求：</strong>${data.requirements}</p>
+            <p>提交时间：${new Date().toLocaleString()}</p>
+          `,
+        }),
+      });
+
       setSubmitStatus('success');
       reset();
     } catch (error) {
@@ -75,7 +95,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">服务热线</h3>
-                  <p className="text-gray-600 mb-1">123-4567-8901</p>
+                  <p className="text-gray-600 mb-1">133-9297-4770</p>
                   <p className="text-gray-500 text-sm">（周一至周日 9:00 - 18:00）</p>
                 </div>
               </div>
