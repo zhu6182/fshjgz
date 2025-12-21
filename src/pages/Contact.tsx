@@ -119,11 +119,38 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-xl h-64 w-full flex items-center justify-center text-gray-400">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <p>地图加载中...</p>
+            {/* Map */}
+            <div className="bg-gray-200 rounded-xl h-64 w-full overflow-hidden relative group">
+              {/* Static Map Image (Using a generic map style image for better performance) */}
+              <img
+                src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20map%20location%20pin%20gps%20navigation%20minimalist%20style&image_size=landscape_16_9"
+                alt="Map Location"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity"
+              />
+              
+              {/* Overlay Content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <MapPin className="w-12 h-12 text-primary mb-2 drop-shadow-md" />
+                <p className="text-gray-800 font-bold text-lg mb-4 drop-shadow-sm">广东省佛山市南海区招商置地3座</p>
+                
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://www.amap.com/search?query=广东省佛山市南海区招商置地3座" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-transform hover:scale-105"
+                  >
+                    <span className="mr-2">高德地图</span>
+                  </a>
+                  <a 
+                    href="https://map.baidu.com/search/广东省佛山市南海区招商置地3座" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600 transition-transform hover:scale-105"
+                  >
+                    <span className="mr-2">百度地图</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
