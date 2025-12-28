@@ -8,7 +8,7 @@ import { supabase } from '../lib/supabase';
 const schema = z.object({
   name: z.string().min(2, '姓名至少需要2个字符'),
   phone: z.string().regex(/^1[3-9]\d{9}$/, '请输入有效的手机号码'),
-  service_type: z.enum(['furniture', 'window']),
+  service_type: z.enum(['furniture', 'window', 'grouting', 'cushion', 'formaldehyde']),
   address: z.string().optional(),
   requirements: z.string().min(5, '请简要描述您的需求'),
 });
@@ -55,7 +55,15 @@ const Contact = () => {
             <h2>新客户咨询</h2>
             <p><strong>姓名：</strong>${data.name}</p>
             <p><strong>电话：</strong>${data.phone}</p>
-            <p><strong>服务类型：</strong>${data.service_type === 'furniture' ? '家具改色贴膜' : '门窗隔热防爆膜'}</p>
+            <p><strong>服务类型：</strong>${
+              {
+                furniture: '家具改色贴膜',
+                window: '门窗隔热防爆膜',
+                grouting: '居家美容胶',
+                cushion: '上门量尺定制坐垫',
+                formaldehyde: '甲醛治理',
+              }[data.service_type]
+            }</p>
             <p><strong>地址：</strong>${data.address || '未填写'}</p>
             <p><strong>需求：</strong>${data.requirements}</p>
             <p>提交时间：${new Date().toLocaleString()}</p>
@@ -218,6 +226,9 @@ const Contact = () => {
                     <option value="">请选择服务类型</option>
                     <option value="furniture">家具改色贴膜</option>
                     <option value="window">门窗隔热防爆膜</option>
+                    <option value="grouting">居家美容胶</option>
+                    <option value="cushion">上门量尺定制坐垫</option>
+                    <option value="formaldehyde">甲醛治理</option>
                   </select>
                   {errors.service_type && (
                     <p className="mt-1 text-sm text-red-500">{errors.service_type.message}</p>

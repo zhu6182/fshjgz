@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield, Users, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Users, Star, Layers, Droplets, Ruler, Wind } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -46,7 +46,7 @@ const Home = () => {
           <p className="text-gray-600 text-lg">专业获客，精准推送，助您轻松接单</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
           {/* Service 1 */}
           <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="aspect-w-16 aspect-h-9 h-64 overflow-hidden">
@@ -119,6 +119,45 @@ const Home = () => {
                 了解详情 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Covered Categories */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">业务覆盖范围</h2>
+          <p className="text-gray-600 text-lg">为您提供多品类的家庭上门服务客咨</p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
+          <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 text-center group">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+              <Layers className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-bold text-gray-900">家具改色贴膜</h3>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 text-center group">
+            <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-100 transition-colors">
+              <Shield className="w-8 h-8 text-secondary" />
+            </div>
+            <h3 className="font-bold text-gray-900">门窗隔热防爆膜</h3>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 text-center group">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+              <Droplets className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-bold text-gray-900">居家美容胶</h3>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 text-center group">
+            <div className="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-100 transition-colors">
+              <Ruler className="w-8 h-8 text-secondary" />
+            </div>
+            <h3 className="font-bold text-gray-900">上门量尺定制坐垫</h3>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1 text-center col-span-2 md:col-span-1 group">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors">
+              <Wind className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-bold text-gray-900">甲醛治理</h3>
           </div>
         </div>
       </section>
