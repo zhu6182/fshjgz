@@ -79,33 +79,33 @@ const Partner = () => {
   const benefits = [
     {
       icon: <Users className="w-8 h-8 text-secondary" />,
-      title: '客户资源支持',
-      description: '总部统一推广获客，按区域精准派单，解决获客难题。',
+      title: '精准客咨推送',
+      description: '大数据分析当地市场，定向投放，实时推送高意向客户需求。',
     },
     {
       icon: <BookOpen className="w-8 h-8 text-secondary" />,
-      title: '专业技术培训',
-      description: '提供全套施工技术培训，手把手教学，包教包会。',
+      title: '技术平台支撑',
+      description: '依托先进技术平台，实现需求快速匹配，高效接单。',
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-secondary" />,
-      title: '运营管理指导',
-      description: '成熟的商业模式输出，日常运营。',
+      title: '成熟商业模式',
+      description: '复制成功经验，提供标准化的运营指导和业务流程。',
     },
     {
       icon: <Shield className="w-8 h-8 text-secondary" />,
-      title: '区域保护政策',
-      description: '严格执行区域保护制度，确保每个合伙人的市场权益。',
+      title: '区域独家保护',
+      description: '严格执行区域保护制度，确保合作伙伴在当地的独家权益。',
     },
     {
       icon: <CheckCircle className="w-8 h-8 text-secondary" />,
-      title: '品牌授权支持',
-      description: '统一品牌形象，共享品牌红利，提升市场竞争力。',
+      title: '全方位扶持',
+      description: '从获客到转化，提供全流程的指导和支持。',
     },
     {
       icon: <MapPin className="w-8 h-8 text-secondary" />,
-      title: '物料配送支持',
-      description: '统一配送施工工具、耗材及宣传物料，降低采购成本。',
+      title: '本地化深耕',
+      description: '专注本地市场，深挖社区需求，建立长期稳定的客户关系。',
     },
   ];
 

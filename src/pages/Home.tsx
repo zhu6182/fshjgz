@@ -15,12 +15,12 @@ const Home = () => {
         />
         <div className="container mx-auto px-4 relative z-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            专注家居升级改造7年
+            专业家庭上门服务后市场
             <br />
-            <span className="text-secondary">焕新您的美好生活</span>
+            <span className="text-secondary">精确客咨提供商</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
-            佛山市好家改造网络科技有限公司，提供专业的家具改色贴膜与门窗隔热防爆膜服务
+            佛山市好家改造网络科技有限公司，以最新技术做支撑，快速将当地市场的上门需求直接推送给您
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <Link
@@ -42,8 +42,8 @@ const Home = () => {
       {/* Core Services */}
       <section className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">核心服务</h2>
-          <p className="text-gray-600 text-lg">两大核心业务，满足您的家居改造需求</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">我们的优势</h2>
+          <p className="text-gray-600 text-lg">专业获客，精准推送，助您轻松接单</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -51,35 +51,35 @@ const Home = () => {
           <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="aspect-w-16 aspect-h-9 h-64 overflow-hidden">
               <img
-                src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=furniture%20color%20change%20film%20application%20process%20modern%20cabinet%20renovation&image_size=landscape_4_3"
-                alt="Furniture Film"
+                src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20marketing%20target%20audience%20data%20analysis%20customer%20acquisition&image_size=landscape_4_3"
+                alt="Precise Leads"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="p-8 bg-white">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">家具改色贴膜</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">精准客咨推送</h3>
               <p className="text-gray-600 mb-6">
-                让旧家具焕发新生，无需更换即可改变家居风格。环保材质，耐磨耐刮，施工快捷。
+                利用大数据技术分析当地市场需求，为您提供高质量、高意向的家庭上门服务客户资源。
               </p>
               <ul className="space-y-2 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                  <span>多种纹理花色可选</span>
+                  <span>定向投放当地市场</span>
                 </li>
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                  <span>环保无味，即贴即住</span>
+                  <span>实时推送最新需求</span>
                 </li>
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-secondary mr-2" />
-                  <span>防潮防霉，易于清洁</span>
+                  <span>筛选高意向客户</span>
                 </li>
               </ul>
               <Link
-                to="/services/furniture"
+                to="/partner"
                 className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors"
               >
-                了解更多 <ArrowRight className="w-5 h-5 ml-2" />
+                立即加入 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
@@ -88,35 +88,35 @@ const Home = () => {
           <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="aspect-w-16 aspect-h-9 h-64 overflow-hidden">
               <img
-                src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=window%20tinting%20film%20installation%20heat%20insulation%20sun%20protection&image_size=landscape_4_3"
-                alt="Window Film"
+                src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=mobile%20app%20notification%20fast%20service%20technology%20support%20connection&image_size=landscape_4_3"
+                alt="Tech Support"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="p-8 bg-white">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">门窗隔热防爆膜</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">最新技术支撑</h3>
               <p className="text-gray-600 mb-6">
-                有效阻隔紫外线和热量，保护隐私安全。防爆设计，意外破碎不飞溅，守护家人安全。
+                依托强大的技术平台，实现客户需求与服务商的快速匹配，让您不再错过任何一个商机。
               </p>
               <ul className="space-y-2 mb-8">
                 <li className="flex items-center text-gray-600">
                   <Shield className="w-5 h-5 text-secondary mr-2" />
-                  <span>高效隔热，节能省电</span>
+                  <span>智能匹配派单系统</span>
                 </li>
                 <li className="flex items-center text-gray-600">
                   <Shield className="w-5 h-5 text-secondary mr-2" />
-                  <span>单向透视，保护隐私</span>
+                  <span>全流程数字化管理</span>
                 </li>
                 <li className="flex items-center text-gray-600">
                   <Shield className="w-5 h-5 text-secondary mr-2" />
-                  <span>防爆安全，防止飞溅</span>
+                  <span>高效便捷的接单体验</span>
                 </li>
               </ul>
               <Link
-                to="/services/window"
+                to="/partner"
                 className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors"
               >
-                了解更多 <ArrowRight className="w-5 h-5 ml-2" />
+                了解详情 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
